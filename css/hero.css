@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container1{
+position: relative;
+/* 
+margin: 0 auto; */
+display: grid;
+grid-template-columns: repeat(3,1fr);
+align-items: center;
+gap: 1rem;
+}
+
+.container1 .card{
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* Green shoe  */
+.container1 .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+/* red bag  */
+.container1 .card:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(122, 46, 46);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* blue watch  */
+  .container1 .card:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(114, 94, 230);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+
+
+.container1 .card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container1 .card:after{
+  content: 'Nike';
+  position: absolute;
+  top: 50%;
+    left: -5%;
+    font-size:7em;
+    font-weight: 800;
+    transform:  rotate(-25deg);
+  color: rgba(255,255,25,0.05)
+}
+
+/* bag  */
+.container1 .card:nth-child(2):after{
+    content: 'Wilson';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    font-size:7em;
+    font-weight: 800;
+    transform:  rotate(-25deg);
+    color: rgba(255,255,25,0.05)
+  }
+
+  /* Watch  */
+.container1 .card:nth-child(3):after{
+    content: 'xiaomi';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    font-size:7em;
+    font-weight: 800;
+    transform:  rotate(-25deg);
+    color: rgba(255,255,25,0.05)
+  }
+.container1 .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+ 
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+  
+}
+
+.container1 .card:hover .imgBx{
+  top: 10%;
+  transform: translateY(0%);
+  /* z-index: -10000; */
+}
+
+.container1 .card .imgBx img{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+.container1 .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  /* z-index: 10; */
+}
+
+.container1 .card:hover .contentBx{
+  height: 210px;
+}
+
+.container1 .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container1 .card .contentBx .size, .container1 .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container1 .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container1 .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container1 .card .contentBx .size h3, .container1 .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container1 .card .contentBx .size, .container1 .card .contentBx .color {
+
+    margin-top: 20px;
+  }
+.container1 .card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container1 .card .contentBx .size span:hover{
+  background: #9bdc28;
+}
+
+.container1 .card .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container1 .card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.container1 .card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.container1 .card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.container1 .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 20px;
+}
+
+.container1 .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  
+}
+
+@media screen and (max-width:1024px){
+
+
+  .container1{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+   
+  }
+  
+}
+
+@media screen and (max-width:600px){
+
+
+  .container1{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+   
+  }
+  
+}

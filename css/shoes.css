@@ -1,0 +1,83 @@
+
+
+.shoes__grid
+
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    
+}
+.shoe__box
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    background: #ffffff;
+   
+}
+.shoe__box:hover
+{
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #ffffff;
+    background-color: white;
+    transform: scale(1.03);
+}
+
+
+.box__details
+{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.box__btn
+{
+   
+margin-top: auto;
+width: 100%;
+margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:1024px){
+
+    
+
+    .container
+    {
+        width: 90%;
+    }
+.shoes__grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    
+}
+
+.box__btn
+{
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width:600px){
+
+    
+    .shoes__grid
+    {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 1rem;
+        
+    }
+    
+    
+    
+    }
